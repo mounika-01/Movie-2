@@ -56,7 +56,7 @@ return movieService.addMovie(movie);
 
 public Movie updateMovie (@PathVariable("movieId") int movieId, @RequestBody Movie movie) {
 
-return movieService.updateMovie(movieId. movie):
+return movieService.updateMovie(movieId, movie);
 }
 @DeleteMapping("/movies/{movieId}")
 public void deleteMovie(@PathVariable("movieId") int movieId){
