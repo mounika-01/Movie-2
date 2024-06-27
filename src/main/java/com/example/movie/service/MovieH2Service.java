@@ -50,8 +50,8 @@ public class MovieH2Service implements MovieRepository {
     public Movie addMovie(Movie movie) {
         db.update("insert into MOVIELIST(movieName, leadActor) values (?, ?)", movie.getMovieName(), movie.getLeadActor());
 
-        Movie savedMovie = db.queryForObject("select * from MOVIELIST where movieName = ? and leadActor = ?",
-                                            new MovieRowMapper(), movie.getMovieName(), movie.getLeadeActor());
+       Movie savedMovie = db.queryForObject("select * from MOVIELIST where movieName = ? and leadActor = ?",                                             
+        new MovieRowMapper(), movie.getMovieName(), movie.getLeadActor());  //updated
 
         return savedMovie;
     }
