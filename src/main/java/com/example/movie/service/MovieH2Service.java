@@ -38,7 +38,7 @@ public class MovieH2Service implements MovieRepository {
     @Override
     public Movie getMovieById(int movieId) {
         try {
-            movie Movie = db.queryForObject("select * from MOVIELIST where movieId = ?",new MovieRowMapper(), movieId);
+           Movie movie = db.queryForObject("select * from MOVIELIST where movieId = ?",new MovieRowMapper(), movieId); 
             return movie; 
         } 
         catch(Exception e) {
